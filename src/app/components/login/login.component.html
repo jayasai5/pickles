@@ -1,0 +1,15 @@
+<div class="login-wrapper">
+    <form class="login" [formGroup]="loginForm">
+        <section class="title">
+            <h3 class="welcome">Welcome to</h3>
+            Company Product Name
+        </section>
+        <div class="login-group">
+            <input class="username" type="text" id="login_username" placeholder="Email" formControlName="email">
+            <input class="password" type="password" id="login_password" placeholder="Password" formControlName="password">
+            <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-primary" style="margin-top:15px">Login</button>
+            <button type="button" class="btn btn-danger" (click)="tryGoogleLogin()" style="margin-top:15px">Login with Google</button>
+            <a routerLink="/register" routerLinkActive="active" class="signup">Don't have an Account? Register</a>
+        </div>
+    </form>
+</div>

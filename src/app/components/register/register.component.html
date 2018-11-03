@@ -1,0 +1,15 @@
+<div class="login-wrapper">
+    <form class="login" [formGroup]="registerForm">
+        <section class="title">
+            <h3 class="welcome">Register</h3>
+            using your email
+        </section>
+        <div class="login-group">
+            <input class="username" type="text" id="login_username" placeholder="Email" formControlName="email">
+            <input class="password" type="password" id="login_password" placeholder="Password" formControlName="password">
+            <input class="password" type="password" id="login_confirm_password" placeholder="Confirm Password" formControlName="confirmPassword">
+            <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-primary" style="margin-top:15px">Register</button>
+            <a routerLink="/login" routerLinkActive="active" class="signup">Existing User? Login</a>
+        </div>
+    </form>
+</div>
