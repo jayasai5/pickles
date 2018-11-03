@@ -83,7 +83,8 @@ export class AuthService {
       uid: user.uid,
       email: user.email,
       roles: {
-        visitor: true
+        customer: true,
+        admin: false
       }
     };
     return userRef.set(data, { merge: true });

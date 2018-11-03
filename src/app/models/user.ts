@@ -5,7 +5,6 @@ export interface User {
     roles: Roles;
 }
 export interface Roles {
-    visitor: boolean;
-    admin?: boolean;
-    customer?: boolean;
+    admin: boolean;
+    customer: boolean;
 }
